@@ -24,12 +24,22 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+       - assets/images/ic_main_tab_company_nor.png
+       - assets/images/ic_main_tab_company_pre.png
+       - assets/images/ic_main_tab_contacts_nor.png
+       - assets/images/ic_main_tab_contacts_pre.png
+       - assets/images/ic_main_tab_find_nor.png
+       - assets/images/ic_main_tab_find_pre.png
+       - assets/images/ic_main_tab_my_nor.png
+       - assets/images/ic_main_tab_my_pre.png
+
 
   # To add assets to your application, add an assets section, like this:
-   assets:
-    - images/pic1.jpeg
-    - images/pic2.jpeg
-    - images/pic3.jpeg
+#   assets:
+#    - images/pic1.jpeg
+#    - images/pic2.jpeg
+#    - images/pic3.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

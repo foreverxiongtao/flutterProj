@@ -109,12 +109,15 @@ Widget getButtonWedget(BuildContext context) {
 Widget getImagesList(BuildContext context) {
   return new Container(child: new Row(
     children: <Widget>[
-      new Image.asset("images/pic1.jpg"),
-      new Image.asset("images/pic2.jpg"),
-      new Image.asset("images/pic3.jpg")
+      new Image.asset("assets/pic1.jpg"),
+      new Image.asset("assets/pic2.jpg"),
+      new Image.asset("assets/pic3.jpg")
     ],
+    mainAxisAlignment:MainAxisAlignment.spaceAround,
   ),);
 }
+
+
 
 
 class HomeWidgetImpl extends State<StatefulWidget> {
