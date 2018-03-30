@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'package:fluttersecond/comm/widget/icon_tab.dart';
-
+import 'package:fluttersecond/tab/mine.dart';
+import 'package:fluttersecond/tab/home.dart';
+import 'package:fluttersecond/tab/contact.dart';
+import 'package:fluttersecond/tab/find.dart';
 /***
  * 首页tab
  */
@@ -60,7 +63,6 @@ class TabMainComponentImpl extends State<StatefulWidget>
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(title: new Text("主页面")),
       body: new Builder(builder: getTabMain),
       bottomNavigationBar: new Builder(builder: getNavigationBar),
     );
@@ -112,8 +114,11 @@ class TabMainComponentImpl extends State<StatefulWidget>
 
 
   Widget getTabMain(BuildContext context) {
-    return new Container(
-      child: new Text("主页面", style: new TextStyle(color: Colors.red),),
-      color: Colors.green,);
+    return new TabBarView(children: [
+      new HomeComponent(),
+      new ContactComponent(),
+      new FindConponent(),
+      new MineComponent(),
+    ], controller: controller,);
   }
 }

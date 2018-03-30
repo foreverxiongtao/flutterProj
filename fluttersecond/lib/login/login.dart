@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttersecond/tab/main.dart';
+import 'package:fluttersecond/login/register.dart';
 
 void main() {
   runApp(new MyApp());
@@ -40,7 +41,11 @@ class LoginComponentImpl extends State<StatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        appBar: new AppBar(title: new Text("登录"),),
+        appBar: new AppBar(title: new Text(
+          "登录", style: new TextStyle(color: Colors.white, fontSize: 20.00),),
+          centerTitle: true,
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.greenAccent,),
         body: new Builder(builder: getContent));
   }
 
@@ -65,7 +70,7 @@ class LoginComponentImpl extends State<StatefulWidget> {
               submit(context);
             }, child: new Text("登录"),),
             new RaisedButton(onPressed: () {
-              submit(context);
+              navigateToRegister(context);
             }, child: new Text("注册"),),
           ], mainAxisAlignment: MainAxisAlignment.spaceEvenly,))
     ]),);
@@ -108,5 +113,15 @@ class LoginComponentImpl extends State<StatefulWidget> {
         builder: (BuildContext context) =>
         new TabMainComponent(pwd, userName: userName,)
     ));
+  }
+
+  /***
+   * 跳转到注册页面
+   */
+  void navigateToRegister(BuildContext context) {
+    Navigator.push(
+        context, new MaterialPageRoute(builder: (BuildContext cotext) {
+      return new RegisterComponent();
+    }));
   }
 }
